@@ -9,7 +9,6 @@ public class ShuffleString {
     public static String restoreString(String s, int[] indices) {
         String newS = "";
         boolean found = false;
-
         for (int i = 0; i < indices.length; i++) {
             found = false;
             for (int j = 0; j < indices.length && !found; j++) {
