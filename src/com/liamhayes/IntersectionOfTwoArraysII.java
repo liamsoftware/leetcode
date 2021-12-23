@@ -17,7 +17,7 @@ public class IntersectionOfTwoArraysII {
         List<Integer> list = new ArrayList<>();
 
         for (int i = 0; i < nums1.length; i++) {
-            if (map.containsKey(nums1[i])) map.put(nums1[1], map.get(nums1[i]) + 1);
+            if (map.containsKey(nums1[i])) map.put(nums1[i], map.get(nums1[i]) + 1);
             else map.put(nums1[i], 1);
         }
 
@@ -29,7 +29,7 @@ public class IntersectionOfTwoArraysII {
         }
 
         int[] result = new int[list.size()];
-        for (int i = 0; i < list.size(); i++) {
+        for (int i = 0; i < result.length; i++) {
             result[i] = list.get(i);
         }
         return result;
