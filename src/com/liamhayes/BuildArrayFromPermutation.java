@@ -3,7 +3,7 @@ package com.liamhayes;
 public class BuildArrayFromPermutation {
 
     public static void main(String[] args) {
-        int[] nums = {0,2,1,5,3,4};
+        int[] nums = {0,2,1,5,3,4,8};
         buildArray(nums);
     }
 
