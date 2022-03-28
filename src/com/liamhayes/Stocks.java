@@ -12,7 +12,7 @@ public class Stocks {
 
         for (int price : prices) {
             if (price < minPrice) minPrice = price;
-            maxProfit = Math.max(price - minPrice, maxProfit).
+            maxProfit = Math.max(price - minPrice, maxProfit);
             //else if (price - minPrice > maxProfit) maxProfit = price - minPrice;
         }
         return maxProfit;
