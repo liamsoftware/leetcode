@@ -14,8 +14,8 @@ public class FloodFill {
   public static void dfs(int[][] img, int r, int c, int colour, int newColour) {
     if (img[r][c] == colour) {
       img[r][c] = newColour;
-      if (r-1 <= 1) dfs(img, r-1, c, colour, newColour);
-      if (c-1 <= 1) dfs(img, r, c-1, colour, newColour);
+      if (r >= 1) dfs(img, r-1, c, colour, newColour);
+      if (c >= 1) dfs(img, r, c-1, colour, newColour);
       if (r+1 > img.length) dfs(img, r+1, c, colour, newColour);
       if (c+1 > img[0].length) dfs(img, r, c+1, colour, newColour);
     }
