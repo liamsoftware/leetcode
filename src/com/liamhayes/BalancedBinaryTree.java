@@ -52,4 +52,30 @@ public class BalancedBinaryTree {
                 && isBal(r.left)
                 && isBal(r.right);
     }
+    
+    
+    //Another solution using dfs and easier to understand.
+    final int UNBALANCED = -1;
+    
+    public boolean isBalanced(TreeNode root) {
+        if (root == null) return true;
+        return dfs(root) != UNBALANCED;
+    }
+    
+    private int dfs(TreeNode n) {
+        if (n.left == null && n.right == null) return 1;
+        
+        int lHeight = 0, rHeight = 0;
+        
+        if (n.left != null) lHeight = dfs(n.left);
+        if (lHeight == UNBALANCED) return UNBALANCED;
+        
+        if (n.right != null) rHeight = dfs(n.right);
+        if (rHeight == UNBALANCED) return UNBALANCED;
+        
+        if (Math.abs(rHeight - lHeight) <= 1) return Math.max(lHeight, rHeight) + 1;
+        return UNBALANCED;
+    }
+    
+    
 }
