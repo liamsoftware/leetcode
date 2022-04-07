@@ -8,9 +8,9 @@ public class KClosestPointToOrigin {
     public static void main(String[] args) {
         int[][] points = { {1, 3}, {3, 4}, {2, -1}};
         int[][] result = findClosestPoints(points, 2);
-//        System.out.print("Here are the k points closest the origin: ");
-//        for (int[] point : result)
-//            System.out.print("[" + point[0] + " , " + point[1] + "] ");
+        System.out.print("Here are the k points closest the origin: ");
+        for (int[] point : result)
+            System.out.print("[" + point[0] + " , " + point[1] + "] ");
     }
 
     public static int[][] findClosestPoints(int[][] points, int k) {
