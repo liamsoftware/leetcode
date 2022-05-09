@@ -1,7 +1,9 @@
 package com.liamhayes;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class LongestSubstringWithoutRepeatingChars {
 
@@ -26,5 +28,24 @@ public class LongestSubstringWithoutRepeatingChars {
             map.put(c, i);
         }
         return len;
+    }
+
+    //sliding window better solution.
+    public static int findLengthOfLongestRepeatingChars(String s) {
+        int left = 0, right = 0, result = 0;
+
+        Set<Character> window = new HashSet<>();
+
+        while (right < s.length()) {
+            if (!window.contains(s.charAt(right))) {
+                window.add(s.charAt(right));
+                right++;
+            } else {
+                window.remove(s.charAt(left));
+                left++;
+            }
+            result = Math.max(result, right - left);
+        }
+        return result;
     }
 }
