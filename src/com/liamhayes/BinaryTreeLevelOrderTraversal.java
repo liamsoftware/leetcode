@@ -1,3 +1,8 @@
+package com.liamhayes;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -14,11 +19,10 @@
  * }
  */
 class BinaryTreeLevelOrderTraversal {
-    
 
     private List<List<Integer>> levels = new ArrayList<>();
     
-    public void helper(TreeNode n, int l) {
+    public void helper(BalancedBinaryTree.TreeNode n, int l) {
         
         if (levels.size() == l) levels.add(new ArrayList<>());
         
@@ -29,7 +33,7 @@ class BinaryTreeLevelOrderTraversal {
     }
     
     
-    public List<List<Integer>> levelOrder(TreeNode root) {
+    public List<List<Integer>> levelOrder(BalancedBinaryTree.TreeNode root) {
         if (root == null) return levels;
         helper(root, 0);
         return levels;
