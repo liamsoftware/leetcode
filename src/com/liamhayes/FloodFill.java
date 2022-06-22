@@ -5,7 +5,7 @@ import java.util.LinkedList;
 
 public class FloodFill {
   
-  public static in[][] floodFill(int[][] img, int sr, int sc, int newColour) {
+  public static int[][] floodFill(int[][] img, int sr, int sc, int newColour) {
     int colour = img[sr][sc];
     if (colour != newColour) dfs(img, sr, sc, colour, newColour);
     return img;
