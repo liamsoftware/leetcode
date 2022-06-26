@@ -21,22 +21,22 @@ public class InvertBinaryTree {
      * }
      */
 
-    public TreeNode invertTree(TreeNode root) {
-        
-        if (root == null) return root;
-        
-        Queue<TreeNode> q = new LinkedList<>();
-        q.add(root);
-        
-        while (!q.isEmpty()) {
-            TreeNode curr = q.poll();
-            TreeNode t = curr.left;
-            curr.left = curr.right;
-            curr.right = t;
-            if (curr.right != null) q.add(curr.right);
-            if (curr.left != null) q.add(curr.left);
-        }
-        return root;
-    }
+//    public TreeNode invertTree(TreeNode root) {
+//
+//        if (root == null) return root;
+//
+//        Queue<TreeNode> q = new LinkedList<>();
+//        q.add(root);
+//
+//        while (!q.isEmpty()) {
+//            TreeNode curr = q.poll();
+//            TreeNode t = curr.left;
+//            curr.left = curr.right;
+//            curr.right = t;
+//            if (curr.right != null) q.add(curr.right);
+//            if (curr.left != null) q.add(curr.left);
+//        }
+//        return root;
+//    }
 }
     
