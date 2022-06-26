@@ -32,5 +32,3 @@ public class MergeTwoSortedLists {
 //        return dummyHead.next;
 //    }
 }
-    
-    
