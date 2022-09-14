@@ -1,8 +1,5 @@
 package com.liamhayes;
 
-import java.util.Queue;
-import java.util.LinkedList;
-
 public class FloodFill {
   
   public static int[][] floodFill(int[][] img, int sr, int sc, int newColour) {
